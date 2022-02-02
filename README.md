@@ -5,7 +5,7 @@ This wrapper exposes NanoVG's functionality in a simple, type-safe Zig API.
 
 ## Usage
 
-Add nanovg-zig to your project, first add this repository as a submodule, then add the following to your `build.zig`:
+To add nanovg-zig to your project, first add this repository as a submodule, then add the following to your `build.zig`:
 
 ```zig
 const nvg = @import("path/to/deps/nanovg/build.zig");
