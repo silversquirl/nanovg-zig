@@ -19,7 +19,7 @@ pub fn main() !void {
     const ctx = nvg.Context.createGl3(.{});
     defer ctx.deleteGl3();
 
-    const font = ctx.createFont("Liberation Sans", "/usr/share/fonts/TTF/LiberationSans-Regular.ttf");
+    const font = ctx.createFontMem("Aileron", @embedFile("Aileron-Regular.otf"), false);
 
     while (c.glfwWindowShouldClose(win) == 0) {
         var width: c_int = undefined;
