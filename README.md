@@ -15,7 +15,7 @@ const nvg = @import("path/to/deps/nanovg/build.zig");
 nvg.add(b, exe, "path/to/deps/nanovg");
 ```
 
-You'll also need to provide a way to link to OpenGL. An example using [epoxy] can be found under `examples/`.
+You'll also need to provide a way to link to OpenGL. An example using [epoxy] can be found under [`examples/`](https://github.com/silversquirl/nanovg-zig/tree/main/examples).
 
 For windowing and calling to OpenGL, it is recommended to use [mach-glfw] and [zgl], respectively.
 
