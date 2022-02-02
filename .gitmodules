@@ -1,0 +1,6 @@
+[submodule "deps/nanovg"]
+	path = deps/nanovg
+	url = https://github.com/inniyah/nanovg.git
+[submodule "deps/stb"]
+	path = deps/stb
+	url = https://github.com/nothings/stb.git
