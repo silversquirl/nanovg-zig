@@ -1,6 +1,8 @@
 const std = @import("std");
 
-pub fn add(b: *std.build.Builder, step: *std.build.LibExeObjStep, nanovg_path: []const u8) void {
+pub fn add(b: *std.build.Builder, step: *std.build.LibExeObjStep) void {
+    const nanovg_path = std.fs.path.dirname(@src().file) orelse ".";
+
     step.linkLibC();
     step.addIncludeDir(b.fmt("{s}/deps/nanovg/src/", .{nanovg_path}));
     step.addIncludeDir(b.fmt("{s}/deps/", .{nanovg_path}));

@@ -7,7 +7,7 @@ pub fn build(b: *std.build.Builder) void {
 
     const exe = b.addExecutable("main", "main.zig");
 
-    nvg.add(b, exe, "nanovg");
+    nvg.add(b, exe);
     exe.addIncludeDir("include");
     exe.linkSystemLibrary("epoxy");
     exe.linkSystemLibrary("glfw3");
