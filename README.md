@@ -12,7 +12,7 @@ const nvg = @import("path/to/deps/nanovg/build.zig");
 
 // ...
 
-nvg.add(b, exe, "path/to/deps/nanovg");
+nvg.add(b, exe);
 ```
 
 You'll also need to provide a way to link to OpenGL. An example using [epoxy] can be found under [`examples/`](https://github.com/silversquirl/nanovg-zig/tree/main/examples).
