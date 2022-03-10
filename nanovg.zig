@@ -228,8 +228,8 @@ pub const Context = opaque {
     extern fn nvgFillPaint(self: *Context, paint: Paint) void;
     extern fn nvgMiterLimit(self: *Context, limit: f32) void;
     extern fn nvgStrokeWidth(self: *Context, size: f32) void;
-    extern fn nvgLineCap(self: *Context, cap: c_int) void;
-    extern fn nvgLineJoin(self: *Context, join: c_int) void;
+    extern fn nvgLineCap(self: *Context, cap: LineCap) void;
+    extern fn nvgLineJoin(self: *Context, join: LineCap) void;
     extern fn nvgGlobalAlpha(self: *Context, alpha: f32) void;
 
     const resetTransform = nvgResetTransform;
