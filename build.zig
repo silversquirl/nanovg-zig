@@ -4,8 +4,8 @@ pub fn add(b: *std.build.Builder, step: *std.build.LibExeObjStep) void {
     const nanovg_path = std.fs.path.dirname(@src().file) orelse ".";
 
     step.linkLibC();
-    step.addIncludeDir(b.fmt("{s}/deps/nanovg/src/", .{nanovg_path}));
-    step.addIncludeDir(b.fmt("{s}/deps/", .{nanovg_path}));
+    step.addIncludePath(b.fmt("{s}/deps/nanovg/src/", .{nanovg_path}));
+    step.addIncludePath(b.fmt("{s}/deps/", .{nanovg_path}));
 
     step.defineCMacroRaw("NANOVG_GL3");
     step.addCSourceFile(b.fmt("{s}/deps/nanovg/src/nanovg.c", .{nanovg_path}), &.{ "-Wall", "-Werror" });
