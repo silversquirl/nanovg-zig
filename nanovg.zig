@@ -35,7 +35,7 @@ pub const Color = extern struct {
         return .{ .r = r, .g = g, .b = b, .a = a };
     }
 
-    const hsla = nvgHSLA;
+    pub const hsla = nvgHSLA;
     extern fn nvgHSLA(h: f32, s: f32, l: f32, a: u8) Color;
 };
 
@@ -232,13 +232,13 @@ pub const Context = opaque {
     extern fn nvgLineJoin(self: *Context, join: LineCap) void;
     extern fn nvgGlobalAlpha(self: *Context, alpha: f32) void;
 
-    const resetTransform = nvgResetTransform;
-    const transform = nvgTransform;
-    const translate = nvgTranslate;
-    const rotate = nvgRotate;
-    const skewX = nvgSkewX;
-    const skewY = nvgSkewY;
-    const scale = nvgScale;
+    pub const resetTransform = nvgResetTransform;
+    pub const transform = nvgTransform;
+    pub const translate = nvgTranslate;
+    pub const rotate = nvgRotate;
+    pub const skewX = nvgSkewX;
+    pub const skewY = nvgSkewY;
+    pub const scale = nvgScale;
     extern fn nvgResetTransform(self: *Context) void;
     extern fn nvgTransform(self: *Context, a: f32, b: f32, c: f32, d: f32, e: f32, f: f32) void;
     extern fn nvgTranslate(self: *Context, x: f32, y: f32) void;
